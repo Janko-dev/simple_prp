@@ -1,7 +1,7 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#include "la.h"
+#include "lacg.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_timer.h>
 #include <stdio.h>
@@ -10,12 +10,15 @@
 #define WIDTH 800
 #define HEIGHT 800
 
+#define VERT_SIZE 8
+
 typedef struct {
     SDL_Window* win;
     SDL_Renderer* rend;
     int isRunning;
-    Matrix* points;
-    Matrix* projections;
+    Vec4 points[8];
+    Vec4 projections[8];
+    Vec3 COP;
     float angle;
 } State;
 

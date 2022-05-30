@@ -1,6 +1,8 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "files.associations": {
-        "sdl_timer.h": "c"
+        "sdl_timer.h": "c",
+        "limits": "c",
+        "*.tcc": "c"
     }
 }
