@@ -101,8 +101,6 @@ void update(State* state){
     // free_mat(state->projections);
     // state->projections = result;
 
-
-
     Vec4 points[VERT_SIZE] = {
         { .x = 0, .y = 0, .z = 0, .h = 1 },
         { .x = 1, .y = 0, .z = 0, .h = 1 },
@@ -118,11 +116,9 @@ void update(State* state){
         add_vec4(&points[i], (Vec4){.x=0, .y=0, .z=2});
         state->points[i] = points[i];
     }
-    state->angle = 0.0f;
 
     // Center of projection (COP) and View up Vector (VUV)
     //state->COP = (Vec3){.x = 4.f, .y = 2.f, .z = 0.f};
-    Vec3 VUV = {.x = 0,   .y = 0,   .z = 1.f};
     
     // World coordinate transform, Rotation matrix, transform -COP
     Mat4x4 w_trans, R, T_COP;
@@ -138,6 +134,7 @@ void update(State* state){
         .y = state->COP.y, 
         .z = state->COP.z
     };
+
     scale_vec3(&w, 1/mag3(state->COP));
     cross_prod3(&u, VUV, w);
     cross_prod3(&v, w, u);
@@ -177,22 +174,22 @@ void render(State* state){
     SDL_SetRenderDrawColor(state->rend, 255, 0, 0, 1);
     for (int i = 0; i < 4; i++){
         SDL_RenderDrawLineF(state->rend,
-            state->points[i].x + WIDTH/2,
-            state->points[i].y + HEIGHT/2,
-            state->points[(i+1)%4].x + WIDTH/2,
-            state->points[(i+1)%4].y + HEIGHT/2);
+            state->points[i].x + state->VRP.x,
+            state->points[i].y + state->VRP.y,
+            state->points[(i+1)%4].x + state->VRP.x,
+            state->points[(i+1)%4].y + state->VRP.y);
         
         SDL_RenderDrawLineF(state->rend,
-            state->points[i+4].x + WIDTH/2,
-            state->points[i+4].y + HEIGHT/2,
-            state->points[((i+1)%4)+4].x + WIDTH/2,
-            state->points[((i+1)%4)+4].y + HEIGHT/2);
+            state->points[i+4].x + state->VRP.x,
+            state->points[i+4].y + state->VRP.y,
+            state->points[((i+1)%4)+4].x + state->VRP.x,
+            state->points[((i+1)%4)+4].y + state->VRP.y);
 
         SDL_RenderDrawLineF(state->rend,
-            state->points[i].x + WIDTH/2,
-            state->points[i].y + HEIGHT/2,
-            state->points[i+4].x + WIDTH/2,
-            state->points[i+4].y + HEIGHT/2);
+            state->points[i].x + state->VRP.x,
+            state->points[i].y + state->VRP.y,
+            state->points[i+4].x + state->VRP.x,
+            state->points[i+4].y + state->VRP.y);
     }
 
     SDL_RenderPresent(state->rend);
@@ -208,23 +205,26 @@ void handleEvents(State* state){
             case SDL_KEYDOWN:{
                 switch (e.key.keysym.sym){
                     case SDLK_LEFT: {
-                        state->COP.x += 1;
-                        state->COP.y += 1;
+                        state->VRP.x--;
                     } break;
                     case SDLK_RIGHT: {
-                        state->COP.x -= 1;
-                        state->COP.y -= 1;
+                        state->VRP.x++;
                     } break;
                     case SDLK_UP: {
-                        state->COP.x *= 0.8f;
-                        state->COP.y *= 0.8f;
+                        state->COP.x -= 0.01f;
+                        state->COP.y -= 0.01f;
                     } break;
                     case SDLK_DOWN: {
-                        state->COP.x *= 1.2f;
-                        state->COP.y *= 1.2f;
+                        state->COP.x += 0.01f;
+                        state->COP.y += 0.01f;
                     } break;
                     default: break;
                 }
+                // print_vec3(state->COP);
+            } break;
+            case SDL_MOUSEMOTION:{
+                //printf("X: %d\n", e.motion.x);
+                
             } break;
             default: break;
         }

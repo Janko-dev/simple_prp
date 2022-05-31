@@ -11,6 +11,7 @@
 #define HEIGHT 800
 
 #define VERT_SIZE 8
+#define VUV (Vec3){.x = 0, .y = 0, .z = 1.f}
 
 typedef struct {
     SDL_Window* win;
@@ -19,6 +20,7 @@ typedef struct {
     Vec4 points[8];
     Vec4 projections[8];
     Vec3 COP;
+    Vec3 VRP;
     float angle;
 } State;
 

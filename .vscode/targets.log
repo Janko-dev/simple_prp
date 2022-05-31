@@ -10,7 +10,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 make.exe: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Mon May 30 15:55:03 2022
+# Make data base, printed on Tue May 31 17:44:06 2022
 
 # Variables
 
@@ -59,9 +59,9 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-2290a000-fc37-4719-b943-27e064f4fab9-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-544d321d-4022-45c1-a34f-ad495da0c26e-sock
 # environment
-VSCODE_CWD = C:\Users\janba\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\WINDOWS\System32
 # environment
 PATH = /c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/c/WINDOWS/System32/OpenSSH/:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Git/cmd:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files/nodejs/:/c/Program Files/dotnet/:/mingw/bin:/usr/bin:/c/Users/janba/AppData/Local/Microsoft/WindowsApps:/c/Users/janba/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin:/mingw/bin:/c/Users/janba/AppData/Roaming/npm:/c/Users/janba/.dotnet/tools:.
 # environment
@@ -87,7 +87,7 @@ SDL = -IC:\Users\janba\Dev\i686-w64-mingw32\include -LC:\Users\janba\Dev\i686-w6
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14052_NYNYRBWFUOXYUISJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10976_RPNXLUYSQTFWUGHU
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -201,7 +201,7 @@ PROCESSOR_LEVEL = 23
 # environment
 TERM = cygwin
 # environment
-VSCODE_PID = 14052
+VSCODE_PID = 10976
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-3AAR4JN
 # variable set hash-table stats:
@@ -275,6 +275,6 @@ default:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon May 30 15:55:03 2022
+# Finished Make data base on Tue May 31 17:44:06 2022
 
  

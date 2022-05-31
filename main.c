@@ -1,7 +1,5 @@
 #include "graphics.h"
 
-
-
 int main(int argc, char **argv){
 
     (void)argc; (void)argv;
@@ -76,6 +74,7 @@ int main(int argc, char **argv){
     //     printf("\n");
     // }
 
+    graphics->VRP = (Vec3){.x=WIDTH/2, .y=HEIGHT/2, .z=0};
     graphics->COP = (Vec3){.x=4, .y=2, .z=0};
 
     while(graphics->isRunning){
