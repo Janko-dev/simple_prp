@@ -1,6 +1,6 @@
-make.exe --dry-run --always-make --keep-going --print-directory
+make.exe --dry-run --keep-going --print-directory
 make.exe: Entering directory `/c/Users/janba/C-dev/Computer_Graphics'
-gcc main.c graphics.c lacg.c -o out -Wall -g -Wextra -IC:\Users\janba\Dev\i686-w64-mingw32\include -LC:\Users\janba\Dev\i686-w64-mingw32\lib -lmingw32 -lSDL2main -lSDL2 -lm
-./out
+gcc main.c graphics.c lacg.c -o 3dprp -Wall -g -Wextra -IC:\Users\janba\Dev\i686-w64-mingw32\include -LC:\Users\janba\Dev\i686-w64-mingw32\lib -lmingw32 -lSDL2main -lSDL2 -lm
+ 
 make.exe: Leaving directory `/c/Users/janba/C-dev/Computer_Graphics'
  

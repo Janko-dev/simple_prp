@@ -10,7 +10,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 make.exe: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Tue May 31 17:44:06 2022
+# Make data base, printed on Thu Jun 30 22:17:33 2022
 
 # Variables
 
@@ -19,6 +19,7 @@ make.exe: *** No rule to make target `all'.  Stop.
 # automatic
 ?F = $(notdir $?)
 # makefile
+ 
 MAKEFLAGS = Rrqp
 # environment
 VSCODE_LOG_NATIVE = false
@@ -59,13 +60,15 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-544d321d-4022-45c1-a34f-ad495da0c26e-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-f63ac761-89c1-4b93-aa33-01bae6e5080d-sock
 # environment
-VSCODE_CWD = C:\WINDOWS\System32
+VSCODE_CWD = C:\Users\janba\C-dev\Computer_Graphics
 # environment
-PATH = /c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/c/WINDOWS/System32/OpenSSH/:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Git/cmd:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files/nodejs/:/c/Program Files/dotnet/:/mingw/bin:/usr/bin:/c/Users/janba/AppData/Local/Microsoft/WindowsApps:/c/Users/janba/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin:/mingw/bin:/c/Users/janba/AppData/Roaming/npm:/c/Users/janba/.dotnet/tools:.
+PATH = /c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/c/WINDOWS/System32/OpenSSH/:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Git/cmd:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files/nodejs/:/c/Program Files/dotnet/:/mingw/bin:/usr/bin:/c/Program Files/Git LFS:/c/Users/janba/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.9:/c/Users/janba/AppData/Local/Microsoft/WindowsApps:/c/Users/janba/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin:/mingw/bin:/c/Users/janba/AppData/Roaming/npm:/c/Users/janba/.dotnet/tools:.
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+GIT_LFS_PATH = C:\Program Files\Git LFS
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
@@ -87,7 +90,7 @@ SDL = -IC:\Users\janba\Dev\i686-w64-mingw32\include -LC:\Users\janba\Dev\i686-w6
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10976_RPNXLUYSQTFWUGHU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13060_FEIFCXUNHVICANJT
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -105,13 +108,15 @@ PUBLIC = C:\Users\Public
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\janba\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = C:\Users\janba\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 LOGONSERVER = \\DESKTOP-3AAR4JN
+# environment
+KINECTSDK10_DIR = C:\Program Files\Microsoft SDKs\Kinect\v1.8\
 # environment
 ONEDRIVECONSUMER = C:\Users\janba\OneDrive
 # environment
@@ -149,7 +154,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
 # environment
 OS = Windows_NT
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\37406f71a663a7ded3962ec94234e7b6-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\37406f71a663a7ded3962ec94234e7b6-1.68.1-main-sock
 # environment
 HOMEPATH = \
 # environment
@@ -179,7 +184,7 @@ MAKEFILES :=
 # environment
 LC_ALL = C
 # makefile (from `makefile', line 4)
-OUT = -o out
+OUT = 3dprp
 # automatic
 ^F = $(notdir $^)
 # default
@@ -201,11 +206,12 @@ PROCESSOR_LEVEL = 23
 # environment
 TERM = cygwin
 # environment
-VSCODE_PID = 10976
+VSCODE_PID = 13060
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-3AAR4JN
+ 
 # variable set hash-table stats:
-# Load=95/1024=9%, Rehash=0, Collisions=9/120=7%
+# Load=97/1024=9%, Rehash=0, Collisions=9/122=7%
 
 # Pattern-specific Variable Values
 
@@ -213,9 +219,9 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-3AAR4JN
 
 # Directories
 
-# . (device -13143, inode 3160319): 15 files, no impossibilities.
+# . (device -13143, inode 3160319): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -238,10 +244,19 @@ all:
 #  Modification time never checked.
 #  File has not been updated.
 
+debug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 11):
+	$(CC) $(IN) -o $(OUT) $(CFLAGS) $(SDL)
+	./$(OUT)
+	
+
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-30 13:45:13
+#  Last modified 2022-06-30 22:16:30
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -252,8 +267,7 @@ default:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 8):
-	$(CC) $(IN) $(OUT) $(CFLAGS) $(SDL)
-	./out
+	$(CC) $(IN) -o $(OUT) $(CFLAGS) $(SDL)
 	
 
 # Not a target:
@@ -263,7 +277,7 @@ default:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/16=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -275,6 +289,6 @@ default:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 31 17:44:06 2022
+# Finished Make data base on Thu Jun 30 22:17:33 2022
 
  

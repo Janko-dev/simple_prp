@@ -55,6 +55,17 @@ typedef struct{
     float d[4][4];
 } Mat4x4;
 
+#define POINTS(v) {\
+        { .x = -v, .y = -v, .z = -v, .h = v },\
+        { .x = v, .y = -v, .z = -v, .h = v },\
+        { .x = v, .y = v, .z = -v, .h = v },\
+        { .x = -v, .y = v, .z = -v, .h = v },\
+        { .x = -v, .y = -v, .z =  v, .h = v },\
+        { .x = v, .y = -v, .z =  v, .h = v },\
+        { .x = v, .y = v, .z =  v, .h = v },\
+        { .x = -v, .y = v, .z =  v, .h = v }\
+    }\
+
 // Matrix 4x4
 void fill_mat4(Mat4x4* m, float val);
 void iden4(Mat4x4* m);
@@ -83,5 +94,6 @@ void print_vec3(const Vec3 v);
 void prod_mat_vec3(Vec3* res, const Mat3x3 A, const Vec3 B);
 void cross_prod3(Vec3* res, const Vec3 A, const Vec3 B);
 float mag3(const Vec3 v);
+float distance(const Vec3 a, const Vec3 b);
 
 #endif // LA_COMP_GRAPHICS_H

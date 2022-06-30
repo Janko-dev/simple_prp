@@ -159,3 +159,7 @@ void cross_prod3(Vec3* res, const Vec3 A, const Vec3 B){
 float mag3(Vec3 v){
     return sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
 }
+
+float distance(const Vec3 a, const Vec3 b){
+    return sqrtf(powf(a.x - b.x, 2) + powf(a.y - b.y, 2) + powf(a.z - b.z, 2));
+}
