@@ -15,10 +15,10 @@ During the 3D modeling transform stage, the points of the vectors of the initial
 ### Scalar transformation matrix
 ---
 ```
-    [s_x  0    0    0]
-S = [0    s_x  0    0]
-    [0    0    s_x  0]
-    [0    0    0    1]
+    [s_x   0    0   0]
+S = [ 0   s_y   0   0]
+    [ 0    0   s_z  0]
+    [ 0    0    0   1]
 ```
 
 ### Rotation transformation matrices
