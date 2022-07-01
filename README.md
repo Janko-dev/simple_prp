@@ -14,59 +14,43 @@ During the 3D modeling transform stage, the points of the vectors of the initial
 
 ### Scalar transformation matrix
 ---
-$
-S_{\vec{s}}=
-\left(\begin{array}{cc} 
-s_x & 0 & 0 & 0 \\
-0 & s_y & 0 & 0 \\
-0 & 0 & s_z & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
+```
+    [s_x  0    0    0]
+S = [0    s_x  0    0]
+    [0    0    s_x  0]
+    [0    0    0    1]
+```
 
 ### Rotation transformation matrices
 ---
-$
-R_{x}=
-\left(\begin{array}{cc} 
-1 & 0 & 0 & 0 \\
-0 & cos\alpha & -sin\alpha & 0 \\
-0 & sin\alpha & cos\alpha & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
-
-$
-R_{y}=
-\left(\begin{array}{cc} 
-cos\alpha & 0 & sin\alpha & 0 \\
-0 & 1 & 0 & 0 \\
--sin\alpha & 0 & cos\alpha & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
-
-$
-R_{z}=
-\left(\begin{array}{cc} 
-cos\alpha & -sin\alpha & 0 & 0 \\
-sin\alpha & cos\alpha & 0 & 0\\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
+```
+      [1    0        0     0]
+R_x = [0  cos(a)  -sin(a)  0]
+      [0  sin(a)   cos(a)  0]
+      [0    0        0     1]
+```
+```
+      [ cos(a)  0  sin(a)  0]
+R_y = [   0     1    0     0]
+      [-sin(a)  0  cos(a)  0]
+      [   0     0    0     1]
+```
+```
+      [cos(a)  -sin(a)  0  0]
+R_z = [sin(a)   cos(a)  0  0]
+      [  0        0     1  0]
+      [  0        0     0  1]
+```
 
 ### Translation transformation matrix
 ---
-$
-T_{\vec{t}}=
-\left(\begin{array}{cc} 
-1 & 0 & 0 & t_x \\
-0 & 1 & 0 & t_y \\
-0 & 0 & 1 & t_z \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
+
+```
+    [1  0  0  t_x]
+T = [0  1  0  t_y]
+    [0  0  1  t_z]
+    [0  0  0    1]
+```
 
 These matrices are meant to transform the object in the 3D modeling transformation step of the pipeline. The following definitions are meant for the viewing transformations.
 
@@ -82,35 +66,23 @@ With these defined, the $\vec{u}$, $\vec{v}$, $\vec{w}$ vectors can be specified
 - $\vec{u} = VUV \times \vec{w}$
 - $\vec{v} = \vec{w} \times \vec{u}$
 
-Combined together, the viewing translation matrix and the viewing rotation matrix has the following form:
+Combined together, the viewing translation matrix and the viewing rotation matrix has the following form, where the translation is defined as negative COP:
 
-$
-R \ T_{-COP} =
-\left(\begin{array}{cc} 
-u_x & u_y & u_z & 0 \\
-v_x & v_y & v_z & 0 \\
-w_x & w_y & w_z & 0 \\
-0 & 0 & 0 & 1
-\end{array}\right)
-\left(\begin{array}{cc} 
-1 & 0 & 0 & -COP_x \\
-0 & 1 & 0 & -COP_y \\
-0 & 0 & 1 & -COP_z \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
-
+```
+        [u_x  u_y  u_z  0] [1  0  0  -COP_x]
+R * T = [v_x  v_y  v_z  0] [0  1  0  -COP_y]
+        [w_x  w_y  w_z  0] [0  0  1  -COP_z]
+        [ 0    0    0   1] [0  0  0     1  ]
+```
 ### Perspective transformation matrix
 ---
 The perspective projection matrix transforms the vector space in a way that adds depth to the projected points.
 
-$
-\left(\begin{array}{cc} 
--\frac{d}{w_p} & 0 & 0 & 0 \\
-0 & -\frac{d}{w_p} & 0 & 0 \\
-0 & 0 & -\frac{d}{w_p} & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-$
+```
+        [-d/w   0    0    0]
+        [  0  -d/w   0    0]
+        [  0    0  -d/w   0]
+        [  0    0    0    1]
+```
 
 Where d is the distance between the Center of Projection (COP) and the View Reference Point (VRP). 
