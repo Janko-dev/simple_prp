@@ -1,5 +1,5 @@
-# Computer Graphics
-In this project, I intend to implement a simplistic version of the 3d polygon rendering pipeline using my own lineair algebra library in C. The project depends on SDL2 for the rendering and uses Make as the build tool. Within the pipeline, the following steps are subsequently performed:
+# Polygon Rendering Pipeline 
+In this project, I intend to implement a simplistic version of the 3d polygon rendering pipeline using my own lineair algebra library in C. The project depends on SDL2 for the rendering and uses `Makefile` as the build tool. Within the pipeline, the following steps are subsequently performed:
 
 **3D modeling transformation -> Viewing transformation -> Perspective transformation**
 
